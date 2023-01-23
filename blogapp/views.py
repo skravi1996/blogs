@@ -1,5 +1,5 @@
 # This is importing all the necessary libraries and modules for the project.
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Blog
 from .serializers import BlogSerializer
 from rest_framework.views import APIView
@@ -178,5 +178,9 @@ class BlogView(APIView):
                    'message' : 'something went wrong in data access'
                 }, status= status.HTTP_400_BAD_REQUEST)   
         
-            
-            
+
+
+
+#def home(request):
+    #data = Blog.objects.all()
+    #return render(request,'home.html',{'data':data})
