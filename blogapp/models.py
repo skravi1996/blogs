@@ -18,8 +18,8 @@ class BaseModel(models.Model):
 # The Blog class inherits from the BaseModel class, and has a one-to-many relationship with the User class      
 class Blog(BaseModel):
     user =  models.ForeignKey(User, related_name='blogs', on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
-    blog_text= models.TextField()  
+    title_2 = models.CharField(max_length=200)
+    blog_text_2= models.TextField()  
     main_image = models.FileField()   
         
     def __str__(self):
@@ -27,7 +27,7 @@ class Blog(BaseModel):
 
 
 class Blog2(models.Model):
-    title = models.CharField(max_length=200)
+    title_1 = models.CharField(max_length=200)
     blog_text= models.TextField()  
     main_image = models.FileField()   
         
